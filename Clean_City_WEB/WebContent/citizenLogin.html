@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="ISO-8859-1" />
+  <title>Citizen Login - Soft Dark Mode</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    /* Soft animated pastel gradient background */
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(-45deg, #8ca6db, #b0c4de, #a1b6d1, #7a96c9);
+      background-size: 400% 400%;
+      animation: gradientBG 30s ease infinite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #2f2f2f;
+    }
+
+    .login-card {
+      background: #e3e8f1;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      padding: 3rem 3.5rem;
+      max-width: 400px;
+      width: 90%;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+      color: #2f2f2f;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      color: #1a1a1a;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 0 3px #7594d4aa;
+    }
+
+    label {
+      font-weight: 600;
+      color: #4a4a4a;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      border: 1.8px solid #a3b0d5;
+      background-color: #f0f4ff;
+      color: #2f2f2f;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      padding: 12px 14px;
+      font-size: 1rem;
+    }
+
+    .form-control::placeholder {
+      color: #7a7a7a;
+    }
+
+    .form-control:focus {
+      border-color: #5579d6;
+      box-shadow: 0 0 10px #5579d6aa;
+      outline: none;
+      background-color: #dbe3ff;
+      color: #222;
+    }
+
+    .btn-login {
+      background: #5579d6;
+      border: none;
+      width: 100%;
+      padding: 14px;
+      font-weight: 700;
+      border-radius: 12px;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
+      box-shadow: 0 6px 15px #5579d6cc;
+      margin-top: 1.5rem;
+    }
+
+    .btn-login:hover {
+      background: #3e5db7;
+      box-shadow: 0 8px 20px #3e5db7cc;
+      transform: translateY(-3px);
+    }
+
+    .links {
+      margin-top: 1.8rem;
+      font-size: 0.95rem;
+      text-align: center;
+      color: #555;
+    }
+
+    .links a {
+      color: #5579d6;
+      font-weight: 600;
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .links a:hover {
+      color: #7a9edf;
+      text-decoration: underline;
+    }
+
+    .form-label i {
+      color: #5579d6;
+      margin-right: 6px;
+      vertical-align: middle;
+      font-size: 1.15rem;
+      text-shadow: 0 0 3px #5579d6aa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card shadow-sm">
+    <h2>Citizen Login</h2>
+    <form action="citizenLogin" method="post" autocomplete="off">
+      <div class="mb-4">
+        <label for="email" class="form-label">
+          <i class="bi bi-envelope-fill"></i>Email
+        </label>
+        <input type="email" id="email" name="cemail" placeholder="Enter Email" class="form-control" required />
+      </div>
+
+      <div class="mb-4">
+        <label for="password" class="form-label">
+          <i class="bi bi-lock-fill"></i>Password
+        </label>
+        <input type="password" id="password" name="cpassword" placeholder="Enter Password" class="form-control" required />
+      </div>
+
+      <button type="submit" class="btn-login">Login</button>
+    </form>
+
+    <div class="links">
+      <a href="change.html">Change Password</a> 
+      <a href="citizenRegister.html">Register</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
